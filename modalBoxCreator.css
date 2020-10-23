@@ -1,0 +1,145 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+:root{
+	--primary: #007bff;
+}
+
+#bgModalBox-modalCreator{
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, .7);
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: .5s;
+	opacity: 0;
+	z-index: 2;
+}
+
+#modalBox-modalCreator{
+	width: 80%;
+	max-width: 450px;
+  min-height: 150px;
+	background: white;
+	justify-content: center;
+  border-radius: 8px;
+	padding: 12px;
+	overflow-x: hidden;
+	display: grid;
+	grid-template-columns: calc(100% - 40px) 20px;
+	grid-template-rows: 20px auto auto auto;
+	box-sizing: border-box;
+}
+
+#modalBox-modalCreator button{
+	outline-style: none;
+}
+
+#btnClose-modalCreator{
+	width: 20px;
+	height: 20px;
+	float: right;
+	cursor: pointer;
+	grid-column: 2/3;
+	grid-row: 1/2;
+}
+
+#btnClose-modalCreator::before{
+	content: '';
+	width: 20px;
+	height: 2px;
+	float: left;
+	background: black;
+	border-radius: 5px;
+	display: block;
+	transform: translateY(8px) rotate(45deg);
+}
+
+#btnClose-modalCreator::after{
+	content: '';
+	width: 20px;
+	height: 2px;
+	background: black;
+	border-radius: 5px;
+	display: block;
+	transform: translateY(8px) rotate(-45deg);
+}
+
+#modalBox-modalCreator h1{
+	width: 100%;
+	grid-column: 1/2;
+	grid-row: 2/3;
+	font-size: 20pt;
+	font-weight: normal;
+	color: #1f1f1f;
+	margin-left: 10px;
+}
+
+#modalBox-modalCreator p{
+	grid-column: 1/2;
+	grid-row: 3/4;
+	font-size: 15pt;
+	font-weight: normal;
+	width: 90%;
+	color: #444;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+#modalButtons-modalCreator{
+	grid-column: 1/2;
+	grid-row: 4/5;
+	width: 100%;
+	height: 50px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	align-self: center;
+}
+
+#btnOk-modalCreator{
+	width: 100px;
+	padding: 6px 0;
+	background-color: var(--primary);
+	color: white;
+	border: 0;
+	border-radius: 6px;
+	margin-right: 10px;
+	cursor: pointer;
+	opacity: .8;
+	transition: .2;
+}
+
+#btnCancel-modalCreator{
+	width: 100px;
+	padding: 6px 0;
+	background-color: #edefea;
+	color: var(--primary);
+	border: 0;
+	border-radius: 6px;
+	margin-right: 10px;
+	cursor: pointer;
+	border: 1px solid #bbb;
+	opacity: .7;
+	transition: .2;
+}
+
+#btnCancel-modalCreator:hover, #btnOk-modalCreator:hover{
+	opacity: 1;
+}
+
+#modalInputText-modalCreator{
+	padding: 4px 6px;
+	font-size: 14pt;
+	width: 80%;
+	max-width: 280px;
+	border: 1px solid #666;
+	border-radius: 6px;
+	margin-top: 30px;
+	margin-left: 50%;
+	transform: translateX(-50%);
+}
