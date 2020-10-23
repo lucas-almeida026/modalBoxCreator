@@ -7,11 +7,11 @@ ___
  Copie os arquivos `modalBoxCreator.js` e `modalBoxCreator.css` para a pasta do seu projeto
 
 ### Importando o CSS
- Copie e cole a folha de estilo `<link>` em seu `<head>` na posição correta: Depois de todas as outras dependênias (bootstrap, etc.) e antes de todos os seus arquivos personalizados
+ Copie e cole a folha de estilo `<link>` em seu `<head>` na posição correta: Antes de todos os outros arquivos css até mesmo o bibliotecas como o bootstrap
  ```
  <head>
-   <link rel="stylesheet" href="otherDependencies">
    <link rel="stylesheet" href="./css/modalBoxCreator.css">
+   <link rel="stylesheet" href="otherDependencies">   
    <link rel="stylesheet" href="./css/yourOwnStylesheets">
  </head>
  ```
