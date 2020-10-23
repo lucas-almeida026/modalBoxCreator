@@ -71,7 +71,7 @@ renderModalBox({
 renderModalBox({
   type: 'confirm',
   title: 'My Question',
-  description: 'Do you want this?'
+  description: 'Do you want this?',
   buttons: {
     ok: 'Yes, I want',
     cancel: "No, I don't"
@@ -90,11 +90,11 @@ renderModalBox({
 ```
 renderModalBox({
   type: 'input',
-  title: 'What is your name?'
+  title: 'What is your name?',
   description: 'Please type only your first name',
   buttons: {
     ok: 'Confirmar'
-  }
+  },
   placeholder: 'First name'
 })
 .then(name => {
